@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "express": "^4.10.4",
+    "express-handlebars": "^1.1.0",
+    "forever": "^0.13.0",
+    "haikro": "^1.6.4"
+  },
+  "scripts": {
+    "start": "forever app.js",
+    "start-dev": "export PORT=3000; node app.js",
+    "deploy": "haikro build deploy --app handlebars-test --heroku-token `heroku auth:token` --commit `git rev-parse HEAD`"
+  }
+}
