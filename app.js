@@ -7,7 +7,11 @@ app.engine('.handlebars', expressHandlebars({
 		'resize': function(width, options) {
 			return '//image.webservices.ft.com/v1/images/raw/' + encodeURIComponent(options.fn(this)) + '?width=' + width + '&source=docs&fit=scale-down';
 		}
-	}
+	},
+	partialsDir: [
+		'views/partials/',
+		'bower_components'
+	]
 }));
 app.set('view engine', '.handlebars');
 
