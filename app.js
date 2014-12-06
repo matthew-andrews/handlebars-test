@@ -10,7 +10,7 @@ app.engine('.handlebars', expressHandlebars({
 	},
 	partialsDir: [
 		'views/partials/',
-		'bower_components'
+		'bower_components/'
 	]
 }));
 app.set('view engine', '.handlebars');
